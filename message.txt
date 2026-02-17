@@ -1,0 +1,193 @@
+le computers into a single network. Each participant1 of such a network would be able to exchange data with the others. But the exact mechanism of implementation was still largely a mystery. Roughly for ten years the scientists were developing and discarding all kinds of ideas, one after another, preserving those that could be at least somewhat handy bit by bit. This is how the prototypes of packet exchange protocols (as well as the concept of a data packet itself) came to be.
+
+In 1969 a duo of American engineers, Robert Taylor and Lawrence Roberts, have made a presentation to the U. S. Department of Defence with a project dubbed2 ARPANET (which stands for Advanced Research Projects Agency Network) founded on the previous research. Even more advanced networks have started to develop based on this one, including what would be later known as ‘networks of networks’. These researches have culminated with the emergence3 of two main network protocols (TCP and IP), which are still used as of today with some modifications.
+
+A modern solution that eventually replaced ARPANET was called NSFNET, which was the National Science Foundation Network. This particular network has adopted the TCP/IP protocol as its main one, and also helped the emergence of the Domain Name System (DNS). And thus when the 1990s have arrived, the Internet architecture as we know it was largely in place.
+
+One should make a distinction between terms ‘the Internet’ and ‘the World Wide Web’. The first one relates to the network architecture in itself4. The second one is more of a modern development and constitutes an interface that allows the access to a network for a user. It emerged in 1990 courtesy of CERN scientists, Tim Berners-Lee in particular. He was the inventor of terms such as HTTP, HTML, and also of a web browser.
+
+In 2020 nearly 4,5 billion people are using the Internet both for work and communication. The Internet is a cornerstone of all modern banking, of the vital infrastructure automated systems, and also of many computer science branches. This promising technology still continues its development nowadays, and for now we can’t even fathom5 what new discoveries this further development can bring.
+
+Thus Spoke Zarathustra
+
+‘Thus Spoke Zarathustra: A Book for All and None’ is a famous and somewhat controversial novel finalized by German philosopher Friedrich Nietzsche in 1885. Nietzsche has considered this book his most important work. It greatly expands on the main ideas that he has presented in his previous works, and remains a hot topic for debates in scholarly circles up to this day.
+
+The book was written in German, and made heavy use of various forms of wordplay. The translations were thus sometimes impeded1 by a lack of corresponding wordplays or terms in other languages. Even taken at face value, the book was made explicitly2 in a way that defies3 any attempts to read it straightforwardly. Nietzsche himself, rather tongue-in-cheek4, has written thus in a preface to his next book, Ecce Homo: ‘With Thus Spoke Zarathustra I have given mankind the greatest present that has ever been made to it so far. This book, with a voice bridging centuries, is not only the highest book there is, the book that is truly characterized by the air of the heights — the whole fact of man lies beneath it at a tremendous distance — it is also the deepest, born out of the innermost wealth of truth, an inexhaustible well to which no pail descends without coming up again filled with gold and goodness’, perhaps hinting at the fact that none of his contemporaries5 had even begun to move in the right direction regarding that book.
+
+The plot of the book is fairly simple. Zarathustra, a wandering philosopher, travels around the world and comments on various people and places he sees. Zarathustra is an evaluator (or rather, transvaluator) of all ideas, and strives to question a broad variety of topics regarding human culture and daily lives.
+
+Three major themes can be followed through the book: the eternal recurrence of everything that is; the possible appearance of ‘super-humanity’; the concept of ‘will to power’ as the cornerstone of human psyche and behaviour.
+
+The idea of ‘eternal return’ (or recurrence) is the idea that each event and occurrence that happens, repeats itself eternally in cycles. Rather than postulating this, Nietzsche actually ponders if it’s true. Although it’s a very popular idea that seemingly stems logically from the laws of infinite Universe as we know it, it still hasn’t been proven nor disproven, so Nietzsche marks it as ‘the most burdensome’ of his thoughts.
+
+The concept of a ‘super-human’ (or, rather, of a ‘beyond-human’, Übermensch) is one of the goals that Nietzsche suggests to humanity through teachings of Zarathustra. The Übermensch is an objectively better type of a human that is destined to transcend6 the regular humans. This idea was interpreted in wildly different ways, sometimes outright xenophobic. But at its core it suggests only transcendence of some stale norms of morality and building a better future on Earth instead of turning to all things spiritual. An antithesis of an Übermensch is called a ‘last man’, a nihilistic, egalitarian and decadent human being, ‘too apathetic to dream’. Nietzsche also suggests that this is another of the possible outcomes of humanity development.
+
+The third idea, which is a ‘will to power’ is never precisely defined in any of Nietzche’s work. This also has brought many speculations and controversy into his works, as well as into the works of his researchers. He did mention though that it’s a driving characteristic of all life, and it’s related to overcoming perils7 and obstacles, including the obstacles within oneself. He also made a notion that human cruelty (in whatever form) may be related to this driving force.
+
+Initially Nietzsche has planned this book to have six parts. During his life he’s managed to write only four, and the fourth was largely written as a rough draft. Debates around the book are still going strong today, and while Nietzsche himself has argued that the book is finished, and opposed vehemently to any attempts to add or remove something from it, the key to the ultimate understanding of his ideas is yet to be found.
+Baby K
+
+The development of a human embryo can go awry1 in many different ways. One of the most common types of birth defects that afflict yet unborn children are referred to as neural tube defects (NTDs). A premise for the development of NTDs lies in an incomplete closure of a neural tube, a precursor2 to the human central nervous system that forms from an embryo’s nervous tissue3 over the course of a normal development. As a result, an opening remains in the developing spine or cranium4 of the fetus, which, depending on its severity, can fully disrupt the growth of the nervous system. Neural tube defects affect either the development of the brain, or spine, or both. Most of the conditions that stem from NTDs are usually untreatable, leave the person largely disabled, and have an extremely high mortality rate.
+
+Anencephaly is a NTD that in broadest terms means the complete absence of the cerebrum5, the largest part of the brain responsible for senses and cognition. The causes of the condition are still unclear, but it is speculated that it can be triggered by a folic acid deficiency and certain types of diabetes in pregnant women. Abortion is strongly encouraged when anencephaly is detected via ultrasound. Anencephalic children are usually either stillborn6, or die from cardiorespiratory arrest mere hours or a few days after the birth.
+
+Nevertheless, there were some cases of anencephaly that truly stood out from the rest. One of such cases was of Stephanie Keene (name was probably changed due to privacy concerns) dubbed as Baby K.
+
+Stephanie was diagnosed with anencephaly long before her birth. Her mother has chosen to keep the child due to her belief as a Christian that all life should be protected.
+
+The doctors and the nurses both strongly advocated for a DNR order7 for the baby, but the mother refused yet again. Over the course of six months after the birth Stephanie has travelled from hospital to a hospital and was kept under a ventilator all this time. Eventually a hospital has filed a lawsuit against Stephanie’s mother, aiming to appoint a legal guardian in her place, and trying to receive a legal confirmation that the hospital couldn’t be held responsible for Stephanie’s health and would opt out8 of any services to her save for palliative caregiving.
+
+And, in a very controversial ruling, the hospital has lost that case. The court has ruled that Stephanie is to be put under a mechanical ventilator and be given other care if any sort of other medical emergency would have arisen. The court has also made a notion that they ruled according to existing laws, without any regard to the rather unusual condition that Stephanie had.
+
+Thus Baby K has lived 2 years and 174 days. Her heart had stopped on April 5, 1995. Keeping her heart beating had cost over 500,000$, a sum, as some would argue, that could’ve been spent on research aimed to prevent NTDs or, possibly, treatment of other newborn children.
+
+A Beautiful Mind
+
+Game theory can be explained broadly as a study of behaviour of rational beings in cooperative and non-cooperative decision making. It’s a relatively new field of science that emerged in the second half of the 20th century. Globalization of economics, advent of nuclear weaponry and emergence1 of computers were all major milestones in the history of humanity, and each subsequently2 dictated the need to formalize at least the most common trade and war strategies.
+
+A game is usually defined as a process involving two or more actors3, each of them having something to gain or lose through their actions after the game is finished (or ‘solved’). Thus, the definition applies to most of the regular games (like, for example, poker), but can be broadened as necessary to cover multitudes of other situations, both real and hypothetical. The action is presumed to be taken by a ‘rational agent’ - that is, an actor that acts consistently and always chooses an action that is the most optimal in terms of loss/gain ratio according to his current position. A game can be cooperative or non-cooperative, allowing or disallowing willing alliances between the participants respectively.
+
+The study of cooperative games usually focuses on why and how the coalitions form, and what actions the members of any coalition would take at any given time. The study of non-cooperative games instead focuses on individual players and on finding a solution called Nash equilibrium4.
+
+Nash equilibrium is a state of a game in which no player, knowing the strategies of other players, can change his own strategy to better his own odds while the other strategies are unchanged. Essentially, this means that all of the players have found the best possible (or ‘optimal’) outcome of the game for themselves, given the current rules and circumstances. Mathematician John Forbes Nash, who was an author of the concept, proved that this equilibrium is possible to find for any finite game.
+
+One of the most famous examples of finding Nash equilibrium is a thought experiment called Prisoner’s dilemma. Suppose there are two prisoners interrogated5 in two different prison cells. They have no way to communicate with each other, but each of them knows that the other is also interrogated. Each prisoner is sentenced to one year in prison. Each prisoner is then offered a deal: if he testifies6 against the other, he is set free, while the other gets a harsher, 3-year penalty. However, if both prisoners testify against each other, both of them will get a harder sentence, and both will serve 2 years in prison. Each prisoner can choose either to testify or to remain silent. What is the optimal course of action for each prisoner?
+
+According to game theory, a rational actor would choose to leave prison, condemning7 the other prisoner. Thus Nash equilibrium in this situation (and the most optimal outcome) would be reached if both prisoners tried to betray each other and subsequently each served 2 years.
+
+Knowledge that in any situation with something to gain or lose there is indeed an optimal course of action with maximized profits for any and all participants has very wide implications8. Finding it might be hard, but the willingness to do that, perhaps, can make us able to stop the wars and other major threats to our society.
+
+For his works in game theory, John Nash was awarded a Nobel Prize in Economic Sciences back in 1994, 45 years after actually writing them down. As of 2020, Nash is the only person ever to be awarded both this prize and the Abel Prize in mathematics, which he was awarded in 2015.
+
+Wonders of the World
+
+Humans are generally good at noticing beautiful things. Humans are also generally good at building beautiful things. A Wonder of the World is a landmark1 or a natural phenomenon that is significant2 enough to be noticed by any person around the world. Many different lists of the Wonders of the World were made over the course of history, so let’s have a look at some!
+
+The first of such lists was made by a Greek historian Herodotus. Only three places were mentioned in it. Eventually the list was expanded up to seven Wonders. Probably everyone can name at least some of those monuments: the Great Pyramid of Giza; the Hanging Gardens of Babylon; the Lighthouse of Alexandria; the Colossus of Rhodes; the Mausoleum at Halicarnassus; the Temple of Artemis; the Statue of Zeus at Olympia. The curious thing about these Wonders is that almost all of them represent3 the Greek culture. Another thing to note is that the ancient Greeks haven’t actually used the term ‘wonder’, but instead it was a list ‘of things to see’, making such lists essentially4 just a travel guide. Almost all of these Wonders were destroyed one way or another, and today only the Great Pyramid of Giza, also known as the Pyramid of Cheops or the Pyramid of Khufu, still stands.
+
+This wasn’t the only list of supposed Wonders though. Later on, many attempts were made (with a little to no consensus) to either make a new list or add more Wonders to the existing one. The most remarkable candidates were Colosseum of Rome, Hagia Sophia of Istanbul, Taj Mahal and the Great Wall of China.
+
+Another peculiar5 attempt was made in 1994. The American Society of Civil Engineers made a list of Seven Wonders of Modern World, focusing mainly on an engineering scope of selected projects. Among other projects, this list features Panama Canal, Channel Tunnel and CN Tower of Toronto, which was the tallest structure in the world up to 2007.
+
+There is also a list of Natural Wonders of the World. It included the Great Barrier Reef, Mount Everest, the Grand Canyon of Arizona and, curiously enough, aurorae6, making it the first list of its kind to include a phenomenon instead of a place.
+
+But what about the world beyond Earth? Surely, it must have its wonders too! And indeed, in 1999, an attempt was made to list Seven Wonders of the Solar System. Amongst those were the rings of Saturn, the asteroid belt and the Great Red Spot of Jupiter.
+
+Ultimately, the world is too big of a place to make an exhaustive list of all landmarks worth visiting. But those that didn’t make into any prominent list are still protected and treasured by their neighbours. The organization that manages the lists of such landmarks and attends7 to any legal matters regarding them is called UNESCO.
+
+The Tower of London
+
+In the year 1066, after his victory at the Battle of Hastings, William the Conqueror was seeking to strengthen his control over the subdued1 English territories. In the following 20 years in England nearly 40 castles were founded by him and his vassals. It was probably the largest castle-building operation in the whole history of medieval2 Europe.
+
+One of the castles was to be founded inside London, already the largest English town in those times. The so-called Tower of London was built on remains of an ancient Roman fortification, and initially was built mainly from timber. Only a hundred years later it was reinforced with stone. The castle takes its name from the White Tower, which is the name of the main keep that still stands as of today. People from other towns referred to it as The Tower of London, and eventually it became a name widespread3 enough to stick.
+
+Given its location and strategic importance, the castle soon became a residence for the richest and the most influential people across England. Over the years the castle has expanded greatly, because each of its owners was always seeking to add something distinct4 to its fortifications. One of the darker stories of that age is the tale of the Princes in the Tower, two young boys of royal blood who were declared illegitimate and then murdered by some unknown assailant5. Remains of two boys were found inside the castle in a wooden box in 1674.
+
+Starting in the 16th century, the castle started to see its use as a royal residence. It gained much notoriety6 in following years though, as it was also used as a prison and a place of execution for people who’d fall out of favour with their rulers.
+
+In modern times The Tower of London became less ominous7. At some point8 there was even a zoo inside. It started as a collection of royal pets that quickly outgrew its accommodations9 and was soon moved to the London Zoo located inside Regent’s Park. It’s still open nowadays and is a popular tourist landmark.
+
+Since 1988 The Tower of London has been listed as a UNESCO World Heritage10 Site. In the 21st century it’s mainly a tourist attraction. Usually you can visit the castle from Wednesday to Sunday, from 10 AM to 6 PM. The entrance fee for an adult is 25£. Visitors have free Wi-Fi access and can also buy some signature snacks in one of the cafes or kiosks inside.
+
+The largest organisms on Earth
+
+What is the largest organism living on Earth? How about those that are extinct1 now? These questions are trickier2 than they look. Are they about height, mass, volume or maybe length? Sometimes we can see only a small part of an otherwise huge living creature. Other times you can argue3 that a colony of organisms that behaves4 as one creature also needs to be considered5. Let’s at least try to find out what are the largest creatures in some taxonomic kingdoms6 out there.
+
+We’ll start with the animal kingdom. Of all the living animals the largest one (and also the heaviest one) is the majestic7 blue whale. It’s so large that there are no scales8 available to weigh them as a whole. The heaviest blue whale ever recorded was at 190 tonnes, while the longest was about 33 meters long. It still came shorter than a humble lion’s mane jellyfish that is nearly 37 meters long.
+
+The largest animal to walk on Earth today (or a terrestrial9 animal) is, without a doubt10, the African bush elephant. An adult elephant bull11 weighs almost 11 tons, and stands about 4 meters tall. Both the blue whale and the African elephant are very gentle12 giants. Despite this, sadly, both populations were hurt severely13 by humans. Currently both species14 are considered endangered15.
+
+But what about the extinct species? Everyone knows that some dinosaurs were gigantic! And while the dinosaurs aren’t actually extinct (since modern birds belong to the dinosaur clade16 Theropoda), the largest of them we know about only from fossils17. For example, the famous Tyrannosaurus rex, as scientists speculate, was standing roughly 370 cm tall and was over 12 meters in length! The largest exhibited18 skull of T. rex was just about one and a half meters long. A study on Tyrannosaurus bones was made in 2012. It has revealed that T. rex had the strongest bite of any terrestrial animal, ever! A hungry Tyrannosaurus could bite with the force of more than 50.000 Newtons, which is comparable19 to some modern hydraulic press machines. One of the largest dinosaurs known today though is Giraffatitan. It was a large, plant-eating creature. Its mass could exceed20 70 tons and it was over 20 meters long!
+
+Other large extinct animals include the species called Palaeoloxodon and Paraceratherium. Those were the distant cousins of modern elephants and rhinos. They were the ones of the largest known mammals to walk the Earth, ever.
+
+But wait, animals are not the only living creatures out there! What about plants and other, more basic organisms? For example, an aspen21 grove called Pando located in south-central Utah, U.S., is believed to be a single organism connected by one root system. If this is correct, the size of Pando is 43.6 hectares, or 0.43 km2! It’s at least a few thousand years of age, making it one of the oldest living organisms, too.
+
+And if you want to go wider, a fungus22 named Armillaria ostoyae occupies nearly 9 km2 as a single colony in the woods of Oregon, U.S. If you think about this colony as a single organism, it can be the largest organism in the world by area occupied.
+
+We’re still making many discoveries23 today. And maybe tomorrow we’ll find something that makes all these things small by comparison24.
+
+The largest organisms on Earth
+
+What is the largest organism living on Earth? How about those that are extinct1 now? These questions are trickier2 than they look. Are they about height, mass, volume or maybe length? Sometimes we can see only a small part of an otherwise huge living creature. Other times you can argue3 that a colony of organisms that behaves4 as one creature also needs to be considered5. Let’s at least try to find out what are the largest creatures in some taxonomic kingdoms6 out there.
+
+We’ll start with the animal kingdom. Of all the living animals the largest one (and also the heaviest one) is the majestic7 blue whale. It’s so large that there are no scales8 available to weigh them as a whole. The heaviest blue whale ever recorded was at 190 tonnes, while the longest was about 33 meters long. It still came shorter than a humble lion’s mane jellyfish that is nearly 37 meters long.
+
+The largest animal to walk on Earth today (or a terrestrial9 animal) is, without a doubt10, the African bush elephant. An adult elephant bull11 weighs almost 11 tons, and stands about 4 meters tall. Both the blue whale and the African elephant are very gentle12 giants. Despite this, sadly, both populations were hurt severely13 by humans. Currently both species14 are considered endangered15.
+
+But what about the extinct species? Everyone knows that some dinosaurs were gigantic! And while the dinosaurs aren’t actually extinct (since modern birds belong to the dinosaur clade16 Theropoda), the largest of them we know about only from fossils17. For example, the famous Tyrannosaurus rex, as scientists speculate, was standing roughly 370 cm tall and was over 12 meters in length! The largest exhibited18 skull of T. rex was just about one and a half meters long. A study on Tyrannosaurus bones was made in 2012. It has revealed that T. rex had the strongest bite of any terrestrial animal, ever! A hungry Tyrannosaurus could bite with the force of more than 50.000 Newtons, which is comparable19 to some modern hydraulic press machines. One of the largest dinosaurs known today though is Giraffatitan. It was a large, plant-eating creature. Its mass could exceed20 70 tons and it was over 20 meters long!
+
+Other large extinct animals include the species called Palaeoloxodon and Paraceratherium. Those were the distant cousins of modern elephants and rhinos. They were the ones of the largest known mammals to walk the Earth, ever.
+
+But wait, animals are not the only living creatures out there! What about plants and other, more basic organisms? For example, an aspen21 grove called Pando located in south-central Utah, U.S., is believed to be a single organism connected by one root system. If this is correct, the size of Pando is 43.6 hectares, or 0.43 km2! It’s at least a few thousand years of age, making it one of the oldest living organisms, too.
+
+And if you want to go wider, a fungus22 named Armillaria ostoyae occupies nearly 9 km2 as a single colony in the woods of Oregon, U.S. If you think about this colony as a single organism, it can be the largest organism in the world by area occupied.
+
+We’re still making many discoveries23 today. And maybe tomorrow we’ll find something that makes all these things small by comparison24.
+
+The largest organisms on Earth
+
+What is the largest organism living on Earth? How about those that are extinct1 now? These questions are trickier2 than they look. Are they about height, mass, volume or maybe length? Sometimes we can see only a small part of an otherwise huge living creature. Other times you can argue3 that a colony of organisms that behaves4 as one creature also needs to be considered5. Let’s at least try to find out what are the largest creatures in some taxonomic kingdoms6 out there.
+
+We’ll start with the animal kingdom. Of all the living animals the largest one (and also the heaviest one) is the majestic7 blue whale. It’s so large that there are no scales8 available to weigh them as a whole. The heaviest blue whale ever recorded was at 190 tonnes, while the longest was about 33 meters long. It still came shorter than a humble lion’s mane jellyfish that is nearly 37 meters long.
+
+The largest animal to walk on Earth today (or a terrestrial9 animal) is, without a doubt10, the African bush elephant. An adult elephant bull11 weighs almost 11 tons, and stands about 4 meters tall. Both the blue whale and the African elephant are very gentle12 giants. Despite this, sadly, both populations were hurt severely13 by humans. Currently both species14 are considered endangered15.
+
+But what about the extinct species? Everyone knows that some dinosaurs were gigantic! And while the dinosaurs aren’t actually extinct (since modern birds belong to the dinosaur clade16 Theropoda), the largest of them we know about only from fossils17. For example, the famous Tyrannosaurus rex, as scientists speculate, was standing roughly 370 cm tall and was over 12 meters in length! The largest exhibited18 skull of T. rex was just about one and a half meters long. A study on Tyrannosaurus bones was made in 2012. It has revealed that T. rex had the strongest bite of any terrestrial animal, ever! A hungry Tyrannosaurus could bite with the force of more than 50.000 Newtons, which is comparable19 to some modern hydraulic press machines. One of the largest dinosaurs known today though is Giraffatitan. It was a large, plant-eating creature. Its mass could exceed20 70 tons and it was over 20 meters long!
+
+Other large extinct animals include the species called Palaeoloxodon and Paraceratherium. Those were the distant cousins of modern elephants and rhinos. They were the ones of the largest known mammals to walk the Earth, ever.
+
+But wait, animals are not the only living creatures out there! What about plants and other, more basic organisms? For example, an aspen21 grove called Pando located in south-central Utah, U.S., is believed to be a single organism connected by one root system. If this is correct, the size of Pando is 43.6 hectares, or 0.43 km2! It’s at least a few thousand years of age, making it one of the oldest living organisms, too.
+
+And if you want to go wider, a fungus22 named Armillaria ostoyae occupies nearly 9 km2 as a single colony in the woods of Oregon, U.S. If you think about this colony as a single organism, it can be the largest organism in the world by area occupied.
+
+We’re still making many discoveries23 today. And maybe tomorrow we’ll find something that makes all these things small by comparison24.
+
+The largest organisms on Earth
+
+What is the largest organism living on Earth? How about those that are extinct1 now? These questions are trickier2 than they look. Are they about height, mass, volume or maybe length? Sometimes we can see only a small part of an otherwise huge living creature. Other times you can argue3 that a colony of organisms that behaves4 as one creature also needs to be considered5. Let’s at least try to find out what are the largest creatures in some taxonomic kingdoms6 out there.
+
+We’ll start with the animal kingdom. Of all the living animals the largest one (and also the heaviest one) is the majestic7 blue whale. It’s so large that there are no scales8 available to weigh them as a whole. The heaviest blue whale ever recorded was at 190 tonnes, while the longest was about 33 meters long. It still came shorter than a humble lion’s mane jellyfish that is nearly 37 meters long.
+
+The largest animal to walk on Earth today (or a terrestrial9 animal) is, without a doubt10, the African bush elephant. An adult elephant bull11 weighs almost 11 tons, and stands about 4 meters tall. Both the blue whale and the African elephant are very gentle12 giants. Despite this, sadly, both populations were hurt severely13 by humans. Currently both species14 are considered endangered15.
+
+But what about the extinct species? Everyone knows that some dinosaurs were gigantic! And while the dinosaurs aren’t actually extinct (since modern birds belong to the dinosaur clade16 Theropoda), the largest of them we know about only from fossils17. For example, the famous Tyrannosaurus rex, as scientists speculate, was standing roughly 370 cm tall and was over 12 meters in length! The largest exhibited18 skull of T. rex was just about one and a half meters long. A study on Tyrannosaurus bones was made in 2012. It has revealed that T. rex had the strongest bite of any terrestrial animal, ever! A hungry Tyrannosaurus could bite with the force of more than 50.000 Newtons, which is comparable19 to some modern hydraulic press machines. One of the largest dinosaurs known today though is Giraffatitan. It was a large, plant-eating creature. Its mass could exceed20 70 tons and it was over 20 meters long!
+
+Other large extinct animals include the species called Palaeoloxodon and Paraceratherium. Those were the distant cousins of modern elephants and rhinos. They were the ones of the largest known mammals to walk the Earth, ever.
+
+But wait, animals are not the only living creatures out there! What about plants and other, more basic organisms? For example, an aspen21 grove called Pando located in south-central Utah, U.S., is believed to be a single organism connected by one root system. If this is correct, the size of Pando is 43.6 hectares, or 0.43 km2! It’s at least a few thousand years of age, making it one of the oldest living organisms, too.
+
+And if you want to go wider, a fungus22 named Armillaria ostoyae occupies nearly 9 km2 as a single colony in the woods of Oregon, U.S. If you think about this colony as a single organism, it can be the largest organism in the world by area occupied.
+
+We’re still making many discoveries23 today. And maybe tomorrow we’ll find something that makes all these things small by comparison24.
+
+The largest organisms on Earth
+
+What is the largest organism living on Earth? How about those that are extinct1 now? These questions are trickier2 than they look. Are they about height, mass, volume or maybe length? Sometimes we can see only a small part of an otherwise huge living creature. Other times you can argue3 that a colony of organisms that behaves4 as one creature also needs to be considered5. Let’s at least try to find out what are the largest creatures in some taxonomic kingdoms6 out there.
+
+We’ll start with the animal kingdom. Of all the living animals the largest one (and also the heaviest one) is the majestic7 blue whale. It’s so large that there are no scales8 available to weigh them as a whole. The heaviest blue whale ever recorded was at 190 tonnes, while the longest was about 33 meters long. It still came shorter than a humble lion’s mane jellyfish that is nearly 37 meters long.
+
+The largest animal to walk on Earth today (or a terrestrial9 animal) is, without a doubt10, the African bush elephant. An adult elephant bull11 weighs almost 11 tons, and stands about 4 meters tall. Both the blue whale and the African elephant are very gentle12 giants. Despite this, sadly, both populations were hurt severely13 by humans. Currently both species14 are considered endangered15.
+
+But what about the extinct species? Everyone knows that some dinosaurs were gigantic! And while the dinosaurs aren’t actually extinct (since modern birds belong to the dinosaur clade16 Theropoda), the largest of them we know about only from fossils17. For example, the famous Tyrannosaurus rex, as scientists speculate, was standing roughly 370 cm tall and was over 12 meters in length! The largest exhibited18 skull of T. rex was just about one and a half meters long. A study on Tyrannosaurus bones was made in 2012. It has revealed that T. rex had the strongest bite of any terrestrial animal, ever! A hungry Tyrannosaurus could bite with the force of more than 50.000 Newtons, which is comparable19 to some modern hydraulic press machines. One of the largest dinosaurs known today though is Giraffatitan. It was a large, plant-eating creature. Its mass could exceed20 70 tons and it was over 20 meters long!
+
+Other large extinct animals include the species called Palaeoloxodon and Paraceratherium. Those were the distant cousins of modern elephants and rhinos. They were the ones of the largest known mammals to walk the Earth, ever.
+
+But wait, animals are not the only living creatures out there! What about plants and other, more basic organisms? For example, an aspen21 grove called Pando located in south-central Utah, U.S., is believed to be a single organism connected by one root system. If this is correct, the size of Pando is 43.6 hectares, or 0.43 km2! It’s at least a few thousand years of age, making it one of the oldest living organisms, too.
+
+And if you want to go wider, a fungus22 named Armillaria ostoyae occupies nearly 9 km2 as a single colony in the woods of Oregon, U.S. If you think about this colony as a single organism, it can be the largest organism in the world by area occupied.
+
+We’re still making many discoveries23 today. And maybe tomorrow we’ll find something that makes all these things small by comparison24.
+The largest organisms on Earth
+
+What is the largest organism living on Earth? How about those that are extinct1 now? These questions are trickier2 than they look. Are they about height, mass, volume or maybe length? Sometimes we can see only a small part of an otherwise huge living creature. Other times you can argue3 that a colony of organisms that behaves4 as one creature also needs to be considered5. Let’s at least try to find out what are the largest creatures in some taxonomic kingdoms6 out there.
+
+We’ll start with the animal kingdom. Of all the living animals the largest one (and also the heaviest one) is the majestic7 blue whale. It’s so large that there are no scales8 available to weigh them as a whole. The heaviest blue whale ever recorded was at 190 tonnes, while the longest was about 33 meters long. It still came shorter than a humble lion’s mane jellyfish that is nearly 37 meters long.
+
+The largest animal to walk on Earth today (or a terrestrial9 animal) is, without a doubt10, the African bush elephant. An adult elephant bull11 weighs almost 11 tons, and stands about 4 meters tall. Both the blue whale and the African elephant are very gentle12 giants. Despite this, sadly, both populations were hurt severely13 by humans. Currently both species14 are considered endangered15.
+
+But what about the extinct species? Everyone knows that some dinosaurs were gigantic! And while the dinosaurs aren’t actually extinct (since modern birds belong to the dinosaur clade16 Theropoda), the largest of them we know about only from fossils17. For example, the famous Tyrannosaurus rex, as scientists speculate, was standing roughly 370 cm tall and was over 12 meters in length! The largest exhibited18 skull of T. rex was just about one and a half meters long. A study on Tyrannosaurus bones was made in 2012. It has revealed that T. rex had the strongest bite of any terrestrial animal, ever! A hungry Tyrannosaurus could bite with the force of more than 50.000 Newtons, which is comparable19 to some modern hydraulic press machines. One of the largest dinosaurs known today though is Giraffatitan. It was a large, plant-eating creature. Its mass could exceed20 70 tons and it was over 20 meters long!
+
+Other large extinct animals include the species called Palaeoloxodon and Paraceratherium. Those were the distant cousins of modern elephants and rhinos. They were the ones of the largest known mammals to walk the Earth, ever.
+
+But wait, animals are not the only living creatures out there! What about plants and other, more basic organisms? For example, an aspen21 grove called Pando located in south-central Utah, U.S., is believed to be a single organism connected by one root system. If this is correct, the size of Pando is 43.6 hectares, or 0.43 km2! It’s at least a few thousand years of age, making it one of the oldest living organisms, too.
