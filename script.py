@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-DIR = "data"
+DIR = "set3"
 
 SUPPORTED_EXTENSIONS = (".png", ".jpg", ".jpeg", ".tiff", ".bmp")
 
