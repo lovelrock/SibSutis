@@ -1,0 +1,15 @@
+========================================
+COMPARATIVE ANALYSIS OF ALL DATASETS
+========================================
+
+Dataset        Restore Rate   Mean PSNR      PSNR 95% CI              Max Capacity   Avg Capacity   
+------------------------------------------------------------------------------------------
+BOSS           40.00          50.99          [49.166514, 52.822304]   13145.00       2563.60        
+Medical        6.67           97.54          [97.544990, 97.544990]   6.00           0.37           
+Flowers        30.00          55.34          [45.500318, 65.188734]   187183.00      7569.53        
+
+
+CONCLUSIONS:
+1. Best restoration rate: BOSS (40.00%)
+2. Best image quality (highest PSNR): Medical (97.54 dB)
+3. Highest capacity: Flowers (187183.00 bits)

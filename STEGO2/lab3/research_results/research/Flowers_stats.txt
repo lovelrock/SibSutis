@@ -1,0 +1,20 @@
+========================================
+RESEARCH RESULTS: Flowers
+========================================
+
+1. INTEGRITY ANALYSIS
+   Total images tested: 30
+   Successful restorations: 9
+   Restoration rate: 30.00%
+
+   Failures observed at capacities: 
+
+2. PSNR ANALYSIS
+   Number of samples: 9
+   Mean PSNR: 55.34 dB
+   95% Confidence Interval: [45.50, 65.19] dB
+
+3. CAPACITY ANALYSIS
+   Maximum capacity: 187183.00 bits
+   Average capacity: 7569.53 bits
+   Capacity in bpp: 0.03 bpp

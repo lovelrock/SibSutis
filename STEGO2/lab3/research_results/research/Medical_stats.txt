@@ -1,0 +1,20 @@
+========================================
+RESEARCH RESULTS: Medical
+========================================
+
+1. INTEGRITY ANALYSIS
+   Total images tested: 30
+   Successful restorations: 2
+   Restoration rate: 6.67%
+
+   Failures observed at capacities: 
+
+2. PSNR ANALYSIS
+   Number of samples: 2
+   Mean PSNR: 97.54 dB
+   95% Confidence Interval: [97.54, 97.54] dB
+
+3. CAPACITY ANALYSIS
+   Maximum capacity: 6.00 bits
+   Average capacity: 0.37 bits
+   Capacity in bpp: 0.00 bpp

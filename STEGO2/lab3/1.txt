@@ -1,0 +1,5 @@
+                lab1                                lab2                            lab3
+                avg psnr, max cap, avg cap          avg psnr, max cap, avg cap      avg psnr, max cap, avg cap
+BOSS            51.59       262144    131072        55.25       139264  69632       51.99       21234  6439
+Medical         51.68       262144    131072        55.98       139264  69632       50.54       20543  5873
+Flowers         51.79       262144    131072        55.41       139264  69632       52.34       21255  6569

@@ -1,0 +1,20 @@
+========================================
+RESEARCH RESULTS: BOSS
+========================================
+
+1. INTEGRITY ANALYSIS
+   Total images tested: 30
+   Successful restorations: 12
+   Restoration rate: 40.00%
+
+   Failures observed at capacities: 1 1725 3451 5177 6903 1 2 3 1 
+
+2. PSNR ANALYSIS
+   Number of samples: 12
+   Mean PSNR: 50.99 dB
+   95% Confidence Interval: [49.17, 52.82] dB
+
+3. CAPACITY ANALYSIS
+   Maximum capacity: 13145.00 bits
+   Average capacity: 2563.60 bits
+   Capacity in bpp: 0.01 bpp
