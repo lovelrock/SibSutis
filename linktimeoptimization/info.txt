@@ -1,0 +1,11 @@
+CMAKE
+1)./bootstrap --prefix=$HOME/cmake
+2)make -j$(nproc)
+3)make install
+MOLD
+1)git clone --branch stable https://github.com/rui314/mold.git .
+2)git checkout на тэг git tag -l
+3)cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$HOME/mold_install -B build
+4)cmake --build build -j$(nproc)
+5)sudo cmake --build build --target install
+6)export PATH="$HOME/mold_install/bin:$PATH"
