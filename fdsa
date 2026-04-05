@@ -1,0 +1,40 @@
+
+git clone https://github.com/mysql/mysql-server.git
+cd mysql-server
+git checkout mysql-8.4.8
+
+У свежих релизов MySQL требования к toolchain довольно строгие. Для актуальной 9.x документации MySQL указывает 
+CMake как систему сборки; в compilation notes также указано, что минимум поддерживаемого CMake — 3.14.6, а в 9.4
+был повышен минимум GCC до 11. Для стабильной 8.4 это обычно менее болезненно, но всё равно лучше иметь современный 
+CMake и компилятор.
+
+cmake --version
+make --version
+g++ --version
+which cmake
+which mold
+echo "$PATH"
+
+
+3) Сделай две отдельные конфигурации Одна — со штатным линкером, вторая — с mold.
+
+Обычный линкер
+cmake -S . -B build-ld \
+  -DCMAKE_BUILD_TYPE=Release
+
+С mold
+Для CMake-проектов правильнее всего подать mold через флаги линковки -fuse-ld=mold, чтобы линковщик выбирал сам драйвер
+компилятора. Это обычно надёжнее, чем пытаться насильно задавать CMAKE_LINKER. Поскольку у MySQL есть и executables, 
+и shared-модули, имеет смысл передать флаг сразу для всех трёх типов линковки.
+
+
+cmake -S . -B build-mold \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold" \
+  -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold" \
+  -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=mold"
+
+4) Один раз полностью собери обе конфигурации
+Это нужно, чтобы потом все объектные файлы уже лежали на месте и ты мерил именно повторный запуск команды линковки, а не компиляцию.
+cmake --build build-ld   -j"$(nproc)"
+cmake --build build-mold -j"$(nproc)"
