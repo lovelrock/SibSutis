@@ -19,3 +19,15 @@ readelf -p .comment bin/clang | grep mold
 https://wiki.csc.sibsutis.ru/en/ClusterPine
 ssh username@pine.cpct.sibsutis.ru
 https://github.com/kitware/cmake
+
+
+cd ~/llvm-project
+mkdir build-default
+cd build-default
+cmake -DCMAKE_BUILD_TYPE=Release \
+      -DLLVM_ENABLE_PROJECTS="clang;lld" \
+      -DCMAKE_INSTALL_PREFIX=$HOME/llvm_install \
+      ../llvm
+time make -j$(nproc)
+
+
