@@ -38,3 +38,74 @@ cmake -S . -B build-mold \
 Это нужно, чтобы потом все объектные файлы уже лежали на месте и ты мерил именно повторный запуск команды линковки, а не компиляцию.
 cmake --build build-ld   -j"$(nproc)"
 cmake --build build-mold -j"$(nproc)"
+
+
+5) Найди команду линковки mysqld
+
+У CMake с генератором Makefiles для каждого target обычно есть link.txt. У MySQL главный серверный бинарник — это mysqld, и его имеет 
+смысл брать как основной объект теста линковки. В дереве сборки путь обычно будет примерно такой:
+
+find build-ld   -path '*/mysqld.dir/link.txt'
+find build-mold -path '*/mysqld.dir/link.txt'
+
+Часто это что-то вроде:
+
+build-ld/sql/CMakeFiles/mysqld.dir/link.txt
+build-mold/sql/CMakeFiles/mysqld.dir/link.txt
+6) Убедись, что во второй сборке реально используется mold
+cat build-mold/sql/CMakeFiles/mysqld.dir/link.txt | sed -n '1p'
+
+Там должен быть -fuse-ld=mold или явный вызов mold. Если этого нет, значит сравнение некорректно.
+
+7) Мерь только линковку
+
+Лучший способ — запускать именно содержимое link.txt, потому что так в замер не попадёт overhead make, проверка timestamp’ов и зависимостей.
+
+Штатный линкер
+/usr/bin/time -f "real=%e user=%U sys=%S" \
+  bash -lc "$(cat build-ld/sql/CMakeFiles/mysqld.dir/link.txt)"
+mold
+/usr/bin/time -f "real=%e user=%U sys=%S" \
+  bash -lc "$(cat build-mold/sql/CMakeFiles/mysqld.dir/link.txt)"
+8) Прогони несколько раз и сравни среднее
+
+Первый запуск лучше отбросить: на нём может влиять файловый кэш.
+
+for i in 1 2 3 4 5; do
+  /usr/bin/time -f "ld run=$i real=%e user=%U sys=%S" \
+    bash -lc "$(cat build-ld/sql/CMakeFiles/mysqld.dir/link.txt)"
+done
+
+for i in 1 2 3 4 5; do
+  /usr/bin/time -f "mold run=$i real=%e user=%U sys=%S" \
+    bash -lc "$(cat build-mold/sql/CMakeFiles/mysqld.dir/link.txt)"
+done
+
+
+10)
+Готовый минимальный набор команд, который я бы советовал, выглядит так:
+
+git clone https://github.com/mysql/mysql-server.git
+cd mysql-server
+git checkout mysql-8.4.8
+
+cmake -S . -B build-ld \
+  -DCMAKE_BUILD_TYPE=Release
+
+cmake -S . -B build-mold \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold" \
+  -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold" \
+  -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=mold"
+
+cmake --build build-ld -j"$(nproc)"
+cmake --build build-mold -j"$(nproc)"
+
+find build-ld -path '*/mysqld.dir/link.txt'
+find build-mold -path '*/mysqld.dir/link.txt'
+
+/usr/bin/time -f "real=%e user=%U sys=%S" \
+  bash -lc "$(cat build-ld/sql/CMakeFiles/mysqld.dir/link.txt)"
+
+/usr/bin/time -f "real=%e user=%U sys=%S" \
+  bash -lc "$(cat build-mold/sql/CMakeFiles/mysqld.dir/link.txt)"
