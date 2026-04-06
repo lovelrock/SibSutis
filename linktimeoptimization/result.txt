@@ -113,3 +113,36 @@ make
 make install
 
 export PATH="$HOME/my_apps/bin:$PATH"
+
+
+скрипт sbatch 
+mg511s28@pine:~/mysql-server$ cat build_mysql_mold.job 
+#!/bin/bash
+#SBATCH --job-name=mysql_mold
+#SBATCH --output=mysql_mold_%j.out
+#SBATCH --error=mysql_mold_%j.err
+#SBATCH --time=24:00:00
+#SBATCH --partition=2288
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=128G
+
+echo "=== Job started at $(date) ==="
+echo "Job ID: $SLURM_JOB_ID"
+echo "Node: $SLURM_JOB_NODELIST"
+
+export PATH="$HOME/cmake/bin:$HOME/mold_install/bin:$PATH"
+
+echo "=== Checking versions ==="
+cmake --version
+mold --version
+
+
+cd ~/mysql-server
+
+echo "=== mold (Debug) ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" \
+    cmake --build build-mold-debug --target mysqld -j${SLURM_CPUS_PER_TASK}
+
+echo "=== Job finished at $(date) ==="

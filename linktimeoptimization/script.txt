@@ -1,0 +1,46 @@
+# Пути к бинарникам
+export PATH="$HOME/cmake/bin:$HOME/mold_install/bin:$PATH"
+
+cd ~/mysql-server
+
+# Удаляем старые конфигурации
+rm -rf build-ld-debug build-mold-debug build-lld-debug
+
+# Конфигурация для GNU ld
+cmake -S . -B build-ld-debug -DCMAKE_BUILD_TYPE=Debug
+
+# Конфигурация для mold
+cmake -S . -B build-mold-debug \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=mold"
+
+# Конфигурация для LLD
+cmake -S . -B build-lld-debug \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=$HOME/build-lld/bin/ld.lld" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=$HOME/build-lld/bin/ld.lld" \
+    -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=$HOME/build-lld/bin/ld.lld"
+
+# Полная сборка
+cmake --build build-ld-debug -j${SLURM_CPUS_PER_TASK}
+cmake --build build-mold-debug -j${SLURM_CPUS_PER_TASK}
+cmake --build build-lld-debug -j${SLURM_CPUS_PER_TASK}
+
+# Удаляем бинарники
+rm -f build-ld-debug/runtime_output_directory/mysqld
+rm -f build-mold-debug/runtime_output_directory/mysqld
+rm -f build-lld-debug/runtime_output_directory/mysqld
+
+# Замеры
+echo "=== GNU ld (Debug) ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-ld-debug --target mysqld
+
+echo "=== mold (Debug) ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-mold-debug --target mysqld
+
+echo "=== LLD (Debug) ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-lld-debug --target mysqld
+
+echo "=== Job finished at $(date) ==="

@@ -11,6 +11,8 @@ MOLD
 5)sudo cmake --build build --target install
 6)export PATH="$HOME/mold_install/bin:$PATH"
 
+LLVM LD
+export PATH="$HOME/build-lld/bin:$PATH"
 
 проверка что после сборки использовался линкер 
 readelf -p .comment bin/clang | grep mold
