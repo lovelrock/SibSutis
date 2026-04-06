@@ -44,3 +44,9 @@ echo "=== LLD (Debug) ==="
 /usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-lld-debug --target mysqld
 
 echo "=== Job finished at $(date) ==="
+
+# Проверка
+
+readelf -p .comment build-mold-debug/runtime_output_directory/mysqld | grep -i mold
+readelf -p .comment build-lld-debug/runtime_output_directory/mysqld | grep -i llvm
+readelf -p .comment build-ld-debug/runtime_output_directory/mysqld
