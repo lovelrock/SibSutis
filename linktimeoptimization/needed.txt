@@ -1,6 +1,7 @@
 mold 2.40.4 (083901f42dea2491be8bc7cf6e3b1e2b9a3c850d; compatible with GNU ld)
 Linker: LLD 23.0.0 (https://github.com/llvm/llvm-project.git 12e957fd7feb388b266fd71ab7960450df6884c1)
 GNU ld (GNU Binutils for Ubuntu) 2.38
+cmake version 4.3.20260403-g0ae58df
 Ubuntu 22.04.5 LTS
 GCC: (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
 

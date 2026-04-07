@@ -33,3 +33,5 @@ cmake -DCMAKE_BUILD_TYPE=Release \
 time make -j$(nproc)
 
 
+export PATH="$HOME/cmake/bin:$HOME/mold_install/bin:$PATH"
+export PATH="$HOME/build-lld/bin:$PATH"

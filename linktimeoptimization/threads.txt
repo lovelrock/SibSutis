@@ -1,0 +1,5 @@
+export MOLD_THREADS=4
+rm -f build-mold-debug/runtime_output_directory/mysqld
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-mold-debug --target mysqld -j$(nproc)
+и во время линковки вызывать ps -eLf | grep ld.mold | grep -v grep | wc -l
+покажет 0->1->38->0

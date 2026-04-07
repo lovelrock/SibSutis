@@ -1,0 +1,62 @@
+#!/bin/bash
+
+cd ~/llvm-project
+
+# 1. Сборка с GNU ld
+echo "=== Building Clang with GNU ld (Release) ==="
+cmake -S llvm -B build-gnu-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLLVM_ENABLE_PROJECTS="clang" \
+    -DCMAKE_INSTALL_PREFIX=~/clang-install-gnu
+cmake --build build-gnu-release -j $(nproc)
+
+# 2. Сборка с mold
+echo "=== Building Clang with mold (Release) ==="
+cmake -S llvm -B build-mold-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLLVM_ENABLE_PROJECTS="clang" \
+    -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_INSTALL_PREFIX=~/clang-install-mold
+cmake --build build-mold-release -j $(nproc)
+
+# 3. Сборка с LLD
+echo "=== Building Clang with LLD (Release) ==="
+cmake -S llvm -B build-lld-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLLVM_ENABLE_PROJECTS="clang" \
+    -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld" \
+    -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=lld" \
+    -DCMAKE_INSTALL_PREFIX=~/clang-install-lld
+cmake --build build-lld-release -j $(nproc)
+
+echo "=== All builds completed! ==="
+
+
+# Удаляем реальный бинарник (не ссылку)
+rm -f build-gnu-release/bin/clang-23
+
+# Замеряем время перелинковки
+echo "=== GNU ld (Release) - relinking clang ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-gnu-release --target clang
+
+# Удаляем реальный бинарник (не ссылку)
+rm -f build-mold-release/bin/clang-23
+
+# Замеряем время перелинковки
+echo "=== GNU ld (Release) - relinking clang ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-mold-release --target clang
+
+
+# Удаляем реальный бинарник (не ссылку)
+rm -f build-lld-release/bin/clang-23
+
+# Замеряем время перелинковки
+echo "=== GNU ld (Release) - relinking clang ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-lld-release --target clang
+
+
+
+readelf -p .comment build-gnu-release/bin/clang-23 | grep -i mold
