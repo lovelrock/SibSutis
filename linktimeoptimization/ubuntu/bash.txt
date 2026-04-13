@@ -1,0 +1,7 @@
+rm -f ~/mysql-server/build-mold-release-t4/runtime_output_directory/mysqld
+rm -f ~/mysql-server/build-mold-release-t4/bin/mysqld
+
+/usr/bin/time -f "real=%e user=%U sys=%S maxrss=%M" \
+  /usr/local/bin/cmake --build ~/mysql-server/build-mold-release-t4 --target mysqld -j$(nproc)
+
+

@@ -1,0 +1,66 @@
+GNU LD
+cmake -S . -B build-ld-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DDOWNLOAD_BOOST=1 \
+    -DWITH_BOOST=$HOME/boost
+
+
+cmake --build build-ld-release -j$(nproc)
+
+
+MOLD
+cmake -S . -B build-mold-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=mold"
+
+cmake --build build-mold-release -j$(nproc)
+
+LLD 
+cmake -S . -B build-lld-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DDOWNLOAD_BOOST=1 \
+    -DWITH_BOOST=$HOME/boost \
+    -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld" \
+    -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=lld"
+
+cmake --build build-lld-release -j$(nproc)
+
+REMOVE
+
+rm -rf build-ld-release/runtime_output_directory/mysqld
+rm -rf build-mold-release/runtime_output_directory/mysqld
+rm -rf build-lld-release/runtime_output_directory/mysqld
+
+
+LINKING
+
+echo "=== GNU ld (Release) ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-ld-release --target mysqld -j$(nproc)
+
+echo "=== GNU mold (Release) ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-mold-release --target mysqld -j$(nproc)
+
+echo "=== GNU lld (Release) ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-lld-release --target mysqld -j$(nproc)
+
+
+CHECKING
+
+echo "=== GNU ld ==="
+readelf -p .comment build-ld-release/runtime_output_directory/mysqld 
+
+echo "=== mold ==="
+readelf -p .comment build-mold-release/runtime_output_directory/mysqld 
+
+echo "=== LLD ==="
+readelf -p .comment build-lld-release/runtime_output_directory/mysqld 
+
+
+CHECKING
+
+проверить в директории проекта build-XX-mysql 
+grep "LINKER_FLAGS" CMakeCache.txt
+grep -r "fuse-ld" CMakeCache.txt

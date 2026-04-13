@@ -1,0 +1,51 @@
+GNU ld (GNU Binutils for Ubuntu) 2.45
+mold 2.40.4 (083901f42dea2491be8bc7cf6e3b1e2b9a3c850d; compatible with GNU ld)
+LLD 23.0.0 (https://github.com/llvm/llvm-project.git 1dc46a29cf8be1d6109bc1a3583b83b9b6662d92) (compatible with GNU linkers)
+
+GNU Make 4.4.1
+cmake version 4.3.0
+flex 2.6.4
+bison (GNU Bison) 3.8.2
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+
+
+
+
+
+
+kirill@kirillUbuntuOC:~/mysql-server/build-ld-release/runtime_output_directory$ lscpu
+Архитектура:                 x86_64
+  CPU op-mode(s):            32-bit, 64-bit
+  Address sizes:             48 bits physical, 48 bits virtual
+  Порядок байт:              Little Endian
+CPU(s):                      12
+  On-line CPU(s) list:       0-11
+ID прроизводителя:           AuthenticAMD
+  Имя модели:                AMD Ryzen 5 8400F 6-Core Processor
+    Семейство ЦПУ:           25
+    Модель:                  117
+    Потоков на ядро:         2
+    Ядер на сокет:           6
+    Сокетов:                 1
+    Степпинг:                2
+    Frequency boost:         enabled
+    CPU(s) scaling MHz:      72%
+    CPU max MHz:             4758,3818
+    CPU min MHz:             412,7170
+    BogoMIPS:                8384,51
+    Флаги:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 n
+                             opl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic
+                              cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpuid_fault cpb cat_l3 cdp_l3 hw_pstate ssbd mba pe
+                             rfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx51
+                             2bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk avx512_bf16 clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_
+                             lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq 
+                             avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm flush_l1d
+Virtualization features:     
+  Виртуализация:             AMD-V
+Caches (sum of all):         
+  L1d:                       192 KiB (6 instances)
+  L1i:                       192 KiB (6 instances)
+  L2:                        6 MiB (6 instances)
+  L3:                        16 MiB (1 instance)
+

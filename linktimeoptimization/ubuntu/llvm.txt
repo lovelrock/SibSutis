@@ -1,0 +1,59 @@
+echo "=== Building Clang with GNU ld (Release) ==="
+cmake -S llvm -B build-gnu-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLLVM_ENABLE_PROJECTS="clang"
+
+
+
+cmake --build build-gnu-release -j $(nproc)
+
+
+echo "=== Building Clang with mold (Release) ==="
+cmake -S llvm -B build-mold-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLLVM_ENABLE_PROJECTS="clang" \
+    -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold" \
+    -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=mold"
+
+
+cmake --build build-mold-release -j $(nproc)
+
+
+
+echo "=== Building Clang with LLD (Release) ==="
+cmake -S llvm -B build-lld-release \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DLLVM_ENABLE_PROJECTS="clang" \
+    -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld" \
+    -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=lld"
+cmake --build build-lld-release -j $(nproc)
+
+
+
+REMOVE
+
+rm -f build-gnu-release/bin/clang-22
+rm -f build-mold-release/bin/clang-22
+rm -f build-lld-release/bin/clang-22
+
+
+LINKTIME
+
+echo "=== GNU ld (Release) - relinking clang ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-gnu-release --target clang
+
+
+echo "=== GNU ld (Release) - relinking clang ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-mold-release --target clang
+
+
+echo "=== GNU ld (Release) - relinking clang ==="
+/usr/bin/time -f "real=%e user=%U sys=%S" cmake --build build-lld-release --target clang
+
+
+CHECK 
+readelf -p .comment build-gnu-release/bin/clang-22 | grep -i gnu
+readelf -p .comment build-mold-release/bin/clang-22 | grep -i mold
+readelf -p .comment build-lld-release/bin/clang-22 | grep -i lld
