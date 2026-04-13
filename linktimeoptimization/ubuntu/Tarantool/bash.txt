@@ -1,0 +1,53 @@
+git clone https://github.com/tarantool/tarantool.git
+git checkout 3.6.2
+cd Tarantool
+
+sudo apt update
+sudo apt install autoconf automake libtool pkg-config
+
+mkdir build-ld 
+cd build-ld 
+
+GNU LD
+
+/usr/local/bin/cmake -S .. -B .   -DCMAKE_BUILD_TYPE=Release
+/usr/bin/time -f "real=%e user=%U sys=%S maxrss=%M"   /usr/local/bin/cmake --build . -j$(nproc)
+
+rm -f src/tarantool
+
+MOLD LD 
+В созданной директори build-mold
+
+/usr/local/bin/cmake -S .. -B . \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=mold -Wl,--no-fork" \
+  -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=mold -Wl,--no-fork" \
+  -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=mold -Wl,--no-fork"
+
+
+/usr/bin/time -f "real=%e user=%U sys=%S maxrss=%M" \
+  /usr/local/bin/cmake --build . -j$(nproc)
+
+rm -f src/tarantool
+
+
+LLD 
+
+/usr/local/bin/cmake -S .. -B . \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=lld" \
+  -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=lld" \
+  -DCMAKE_MODULE_LINKER_FLAGS="-fuse-ld=lld"
+
+
+
+/usr/bin/time -f "real=%e user=%U sys=%S maxrss=%M" \
+  /usr/local/bin/cmake --build . -j$(nproc)
+
+rm -f src/tarantool
+
+
+
+
+CHECKING 
+cat ~/tarantool/build-lld/src/CMakeFiles/tarantool.dir/link.txt | grep -i lld

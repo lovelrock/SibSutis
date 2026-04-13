@@ -5,8 +5,8 @@ LLD 23.0.0 (https://github.com/llvm/llvm-project.git 1dc46a29cf8be1d6109bc1a3583
 
 clang version 22.1.2 Исходный код LLVM версии 22.1.2
 mysql-9.6.0
-
-
+posgresql  REL_18_3
+Tarantool 3.6.2
 
 OC
 Description:	Ubuntu 25.10

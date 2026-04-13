@@ -1,0 +1,43 @@
+git clone https://github.com/postgres/postgres.git
+sudo apt install libreadline-dev
+sudo apt install libicu-dev pkg-config
+
+
+GNU LD
+
+mkdir build-ld
+ 
+cd ~/postgres/build-ld
+../configure CC=gcc CFLAGS="-O3" LDFLAGS=""
+
+/usr/bin/time -f "real=%e user=%U sys=%S maxrss=%M"   make -j$(nproc)
+
+cd build-ld 
+rm -f src/backend/postgres
+
+
+MOLD
+
+cd ~/postgres
+mkdir build-mold
+cd build-mold
+
+../configure CC=gcc CFLAGS="-O3" LDFLAGS="-fuse-ld=mold -Wl,--no-fork"
+
+/usr/bin/time -f "real=%e user=%U sys=%S maxrss=%M"   make -j$(nproc)
+
+rm -f src/backend/postgres
+
+LLD
+
+../configure CC=gcc CFLAGS="-O3" LDFLAGS="-fuse-ld=lld"
+
+/usr/bin/time -f "real=%e user=%U sys=%S maxrss=%M"   make -j$(nproc)
+
+rm -f src/backend/postgres
+
+
+CHECKING
+
+выполнеять в директори на уровень выше склонированой репы
+make -n | grep lld 

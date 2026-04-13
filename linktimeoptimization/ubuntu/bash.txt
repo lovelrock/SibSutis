@@ -15,3 +15,6 @@ cd ~/mysql-server/build-mold-release-t4/bin && du -sh mysqld
 
 ДЛЯ LLVM CLANG минус 5.91
 
+Для PosgresQL минус 0.23
+
+Для Тарантул минус 0.38
