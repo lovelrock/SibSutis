@@ -1,0 +1,26 @@
+Таблица 2
+
+Проект          |Компоновщик     |Потоки   |  Время, с |Размер,МБ
+mysqlserver  | mold           |  1      | 0.48      | 94
+mysqlserver  |mold           |  2      | 0.32      | 94
+mysqlserver  | mold           |  4      | 0.20      | 94
+mysqlserver  | mold           |  8      | 0.15      | 94
+mysqlserver  | mold           |  12     | 0.13      | 94
+mysqlserver  | ld.lld         |  1      | 0.45      | 90
+mysqlserver  | ld.lld         |  2      | 0.29      | 90
+mysqlserver  | ld.lld         |  4      | 0.25      | 90
+mysqlserver  | ld.lld         |  8      | 0.23      | 90
+mysqlserver  | ld.lld         |  12     | 0.21      | 90
+mysqlserver  | GNU ld         |  1      | 3.30      | 89
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+llvm- clang-22|mold | 1 | 0.76  | 240 MB
+llvm- clang-22|mold | 2 | 0.29 | 240 MB
+llvm- clang-22|mold | 4 | 0.26  | 240 MB
+llvm- clang-22|mold | 8| 0.20 | 240 MB
+llvm- clang-22|mold | 12 | 0.14  | 240 MB
+llvm- clang-22|ld.lld | 1 | 0.8  | 234 MB
+llvm- clang-22|ld.lld | 2 | 0. 57 | 234 MB
+llvm- clang-22|ld.lld | 4 | 0.33  | 234 MB
+llvm- clang-22|ld.lld | 8 | 0.30  | 234 MB
+llvm- clang-22|ld.lld | 12 | 0.30  | 234 MB
+llvm- clang-22|GNU | 1 | 7.1  | 233 MB

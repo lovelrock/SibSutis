@@ -1,0 +1,163 @@
+kirill@kirillUbuntuOC:~/llvm-project$ cat bench_linkers_llvm.sh 
+#!/usr/bin/env bash
+set -euo pipefail
+
+# =========================
+# Пути и настройки
+# =========================
+
+SRC_DIR="${HOME}/llvm-project"
+CMAKE_BIN="/usr/local/bin/cmake"
+
+TARGET="clang"
+BUILD_TYPE="Release"
+
+# Какие потоки тестировать
+THREADS_LIST=(1 2 4 8 12)
+
+# Сколько повторов relink на каждую точку
+RUNS=5
+
+# Сколько потоков у build system
+BUILD_JOBS="${BUILD_JOBS:-$(nproc)}"
+
+# Генератор, если хотите Ninja:
+# GENERATOR="Ninja"
+GENERATOR="${GENERATOR:-}"
+
+RESULTS_DIR="${SRC_DIR}/link-bench-results"
+mkdir -p "${RESULTS_DIR}"
+CSV_FILE="${RESULTS_DIR}/llvm_clang22_link_bench_release_$(date +%Y%m%d_%H%M%S).csv"
+
+# Для llvm-project / clang-22
+BINARY_REL_PATHS=(
+  "bin/clang-22"
+)
+
+# =========================
+# Проверки
+# =========================
+
+[[ -d "${SRC_DIR}" ]] || { echo "ERROR: no source dir ${SRC_DIR}" >&2; exit 1; }
+[[ -x "${CMAKE_BIN}" ]] || { echo "ERROR: cmake not found: ${CMAKE_BIN}" >&2; exit 1; }
+command -v /usr/bin/time >/dev/null 2>&1 || { echo "ERROR: /usr/bin/time not found" >&2; exit 1; }
+
+# =========================
+# Функции
+# =========================
+
+configure_build() {
+  local linker="$1"
+  local threads="$2"
+  local build_dir="$3"
+
+  local common_args=()
+  if [[ -n "${GENERATOR}" ]]; then
+    common_args+=(-G "${GENERATOR}")
+  fi
+
+  local linker_flags=""
+  if [[ "${linker}" == "mold" ]]; then
+    linker_flags="-fuse-ld=mold -Wl,--threads=${threads} -Wl,--no-fork"
+  elif [[ "${linker}" == "lld" ]]; then
+    linker_flags="-fuse-ld=lld -Wl,--threads=${threads}"
+  else
+    echo "ERROR: unknown linker ${linker}" >&2
+    exit 1
+  fi
+
+  echo
+  echo "=== Configure: linker=${linker} threads=${threads} build_dir=${build_dir} ==="
+
+  "${CMAKE_BIN}" -S "${SRC_DIR}/llvm" -B "${build_dir}" \
+    "${common_args[@]}" \
+    -DCMAKE_BUILD_TYPE="${BUILD_TYPE}" \
+    -DCMAKE_EXE_LINKER_FLAGS="${linker_flags}" \
+    -DCMAKE_SHARED_LINKER_FLAGS="${linker_flags}" \
+    -DCMAKE_MODULE_LINKER_FLAGS="${linker_flags}" \
+    -DLLVM_ENABLE_PROJECTS="clang"
+}
+
+full_build_once() {
+  local build_dir="$1"
+
+  echo
+  echo "=== Full build once: ${build_dir} ==="
+  /usr/bin/time -f "FULL_BUILD real=%e user=%U sys=%S maxrss=%M" \
+    "${CMAKE_BIN}" --build "${build_dir}" --target "${TARGET}" -j"${BUILD_JOBS}"
+}
+
+remove_target_outputs() {
+  local build_dir="$1"
+
+  for rel in "${BINARY_REL_PATHS[@]}"; do
+    rm -f "${build_dir}/${rel}"
+  done
+}
+
+find_existing_binary() {
+  local build_dir="$1"
+
+  for rel in "${BINARY_REL_PATHS[@]}"; do
+    if [[ -e "${build_dir}/${rel}" ]]; then
+      echo "${build_dir}/${rel}"
+      return 0
+    fi
+  done
+  return 1
+}
+
+relink_runs() {
+  local linker="$1"
+  local threads="$2"
+  local build_dir="$3"
+
+  for run_id in $(seq 1 "${RUNS}"); do
+    remove_target_outputs "${build_dir}"
+
+    echo
+    echo "=== Relink: linker=${linker} threads=${threads} run=${run_id} ==="
+
+    local time_output
+    time_output=$(
+      /usr/bin/time -f "%e,%U,%S,%M" \
+        "${CMAKE_BIN}" --build "${build_dir}" --target "${TARGET}" -j"${BUILD_JOBS}" \
+        2>&1 >/dev/null | tail -n1
+    )
+
+    local real user sys maxrss
+    IFS=',' read -r real user sys maxrss <<< "${time_output}"
+
+    local bin_path="NOT_FOUND"
+    if found=$(find_existing_binary "${build_dir}"); then
+      bin_path="${found}"
+    fi
+
+    echo "linker=${linker} threads=${threads} run=${run_id} real=${real} user=${user} sys=${sys} maxrss=${maxrss} bin=${bin_path}"
+    echo "${linker},${threads},${run_id},${real},${user},${sys},${maxrss},${bin_path},${build_dir}" >> "${CSV_FILE}"
+  done
+}
+
+# =========================
+# CSV header
+# =========================
+
+echo "linker,threads,run,real_sec,user_sec,sys_sec,maxrss_kb,binary_path,build_dir" > "${CSV_FILE}"
+
+# =========================
+# Основной цикл
+# =========================
+
+for linker in mold lld; do
+  for threads in "${THREADS_LIST[@]}"; do
+    build_dir="${SRC_DIR}/build-${linker}-release-t${threads}"
+
+    configure_build "${linker}" "${threads}" "${build_dir}"
+    full_build_once "${build_dir}"
+    relink_runs "${linker}" "${threads}" "${build_dir}"
+  done
+done
+
+echo
+echo "Done."
+echo "CSV: ${CSV_FILE}"

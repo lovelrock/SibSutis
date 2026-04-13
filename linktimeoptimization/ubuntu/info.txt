@@ -2,6 +2,17 @@ GNU ld (GNU Binutils for Ubuntu) 2.45
 mold 2.40.4 (083901f42dea2491be8bc7cf6e3b1e2b9a3c850d; compatible with GNU ld)
 LLD 23.0.0 (https://github.com/llvm/llvm-project.git 1dc46a29cf8be1d6109bc1a3583b83b9b6662d92) (compatible with GNU linkers)
 
+
+clang version 22.1.2 Исходный код LLVM версии 22.1.2
+mysql-9.6.0
+
+
+
+OC
+Description:	Ubuntu 25.10
+Release:	25.10
+
+
 GNU Make 4.4.1
 cmake version 4.3.0
 flex 2.6.4

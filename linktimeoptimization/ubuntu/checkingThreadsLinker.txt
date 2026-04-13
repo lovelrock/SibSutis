@@ -3,3 +3,11 @@ cat ~/llvm-project/build-mold-release-t1/tools/clang/tools/driver/CMakeFiles/cla
 в CMAKE
 grep -E 'CMAKE_EXE_LINKER_FLAGS|CMAKE_SHARED_LINKER_FLAGS|CMAKE_MODULE_LINKER_FLAGS' \
   ~/llvm-project/build-mold-release-t1/CMakeCache.txt
+
+
+
+for d in build-mold-release-t1 build-mold-release-t2 build-mold-release-t4 build-mold-release-t8; do
+  echo "===== $d ====="
+  grep -E 'CMAKE_(EXE|SHARED|MODULE)_LINKER_FLAGS:STRING=' "$d/CMakeCache.txt"
+  echo
+done

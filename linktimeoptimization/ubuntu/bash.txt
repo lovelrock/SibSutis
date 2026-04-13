@@ -5,3 +5,13 @@ rm -f ~/mysql-server/build-mold-release-t4/bin/mysqld
   /usr/local/bin/cmake --build ~/mysql-server/build-mold-release-t4 --target mysqld -j$(nproc)
 
 
+
+проверка размера 
+cd ~/llvm-project/build-mold-release-t4/bin && du -sh clang-22
+cd ~/mysql-server/build-mold-release-t4/bin && du -sh mysqld
+
+
+ДЛЯ MYSQL минус 1.50 секунд сборка
+
+ДЛЯ LLVM CLANG минус 5.91
+
