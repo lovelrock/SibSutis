@@ -10,7 +10,7 @@ plt.figure(figsize=(9, 5.5))
 plt.plot(threads, lld, marker='o', linewidth=2, label='ld.lld')
 plt.plot(threads, mold, marker='o', linewidth=2, label='mold')
 
-plt.title('Зависимость времени линковки от количества потоков, Mysqlserver')
+plt.title('Зависимость времени линковки исполняемого файла mysqld от количества потоков')
 plt.xlabel('Количество потоков')
 plt.ylabel('Время, с')
 plt.xticks(threads)
