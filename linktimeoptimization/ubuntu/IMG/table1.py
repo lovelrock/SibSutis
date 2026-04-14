@@ -1,10 +1,10 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
-projects = ["MySQL", "PostgreSQL", "Tarantool", "LLVM-clang22"]
-gnu_ld = [3.22, 0.36, 0.38, 4.73]
-ld_lld = [0.22, 0.10, 0.05, 0.38]
-mold = [0.14, 0.10, 0.03, 0.15]
+projects = ["clang-22", "mysqld", "postgres", "tarantool"]
+gnu_ld = [4.73, 3.22, 0.36, 0.38]
+ld_lld = [0.38, 0.22, 0.10, 0.05]
+mold = [0.15, 0.14, 0.10, 0.03]
 
 x = np.arange(len(projects))
 width = 0.22
