@@ -1,0 +1,15 @@
+
+
+[100%] Built target llvm-reduce
+[100%] Built target c-index-test
+GNU ld: real=1737.58 user=17829.29 sys=1334.00
+
+
+[100%] Built target c-index-test
+mold: real=1717.95 user=17754.60 sys=1301.57
+
+
+
+[100%] Linking CXX executable ../../../../bin/c-index-test
+[100%] Built target c-index-test
+LLD: real=1726.77 user=17769.38 sys=1346.36
