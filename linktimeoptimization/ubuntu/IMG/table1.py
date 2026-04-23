@@ -23,6 +23,8 @@ ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.08), ncol=3)
 
 ax.grid(axis="y", alpha=0.4)
 
+ax.set_ylim(0, 2)
+
 plt.tight_layout()
 plt.savefig("linker_comparison_chart_simple.png", dpi=300)
 plt.show()
