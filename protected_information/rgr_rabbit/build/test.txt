@@ -1,0 +1,3 @@
+This is a secret message for secure transfer!
+Line 2: Testing Rabbit cipher
+Line 3: ECDH + SHA3 integration

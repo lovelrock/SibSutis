@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -Wall -Wl,--dependency-file=CMakeFiles/secure_client.dir/link.d CMakeFiles/secure_client.dir/src/main.cpp.o CMakeFiles/secure_client.dir/src/ecdh.cpp.o CMakeFiles/secure_client.dir/src/sha3.cpp.o CMakeFiles/secure_client.dir/src/rabbit.c.o CMakeFiles/secure_client.dir/src/utils.cpp.o CMakeFiles/secure_client.dir/src/rdtsc.cpp.o -o secure_client  -lgmp -lpthread

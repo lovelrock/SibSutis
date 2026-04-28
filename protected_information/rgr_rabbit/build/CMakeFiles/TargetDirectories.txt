@@ -1,0 +1,8 @@
+/home/kirill/SibSutis/protected_information/rgr_rabbit/build/CMakeFiles/secure_client.dir
+/home/kirill/SibSutis/protected_information/rgr_rabbit/build/CMakeFiles/secure_server.dir
+/home/kirill/SibSutis/protected_information/rgr_rabbit/build/CMakeFiles/edit_cache.dir
+/home/kirill/SibSutis/protected_information/rgr_rabbit/build/CMakeFiles/rebuild_cache.dir
+/home/kirill/SibSutis/protected_information/rgr_rabbit/build/CMakeFiles/list_install_components.dir
+/home/kirill/SibSutis/protected_information/rgr_rabbit/build/CMakeFiles/install.dir
+/home/kirill/SibSutis/protected_information/rgr_rabbit/build/CMakeFiles/install/local.dir
+/home/kirill/SibSutis/protected_information/rgr_rabbit/build/CMakeFiles/install/strip.dir
