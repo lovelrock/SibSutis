@@ -27,7 +27,7 @@ sudo systemctl status docker
 
 
 sudo systemctl start docker
-
+---------------------------------------------
 
 
 git clone https://github.com/digininja/DVWA.git
@@ -36,4 +36,21 @@ git clone https://github.com/digininja/DVWA.git
 
 sudo docker compose up -d
 
+-----------------------------------------------
+chmod +x burpsuite_linux_v2026_4_3.sh
 
+
+./burpsuite_linux_v2026_4_3.sh 
+
+
+
+find / -type d -name "BurpSuite*" 2>/dev/null поиск
+
+
+
+sudo chown root:root ~/BurpSuite/burpbrowser/*/chrome-sandbox
+sudo chmod 4755 ~/BurpSuite/burpbrowser/*/chrome-sandbox
+
+
+
+http://localhost:4280
