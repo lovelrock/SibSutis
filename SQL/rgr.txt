@@ -1,6 +1,6 @@
 SQL INJECTIONS
 
-
+' OR '1'='1' --
 
 
 

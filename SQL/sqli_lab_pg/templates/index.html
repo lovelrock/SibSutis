@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банк "Безопасный" - Поиск клиентов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            color: #856404;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .user-info {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .user-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        td:first-child {
+            font-weight: bold;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏦 Банк "Безопасный"</h1>
+        <div class="warning">
+            ⚠️ Внимание: Система поиска клиентов по email и дате рождения
+        </div>
+        
+        <form method="POST">
+            <label>📧 Email:</label>
+            <input type="text" name="email" placeholder="example@bank.com" required>
+            
+            <label>🎂 Дата рождения:</label>
+            <input type="date" name="birth_date" required>
+            
+            <button type="submit">🔍 Найти клиента</button>
+        </form>
+        
+        {% if error %}
+            <div class="error">
+                {{ error }}
+            </div>
+        {% endif %}
+        
+        {% if user %}
+            <div class="user-info">
+                <h3>📋 Информация о клиенте</h3>
+                <table>
+                    <tr>
+                        <td>Логин:</td>
+                        <td>{{ user.login }}</td>
+                    </tr>
+                    <tr>
+                        <td>Хэш пароля:</td>
+                        <td><code>{{ user.password_hash }}</code></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>ФИО:</td>
+                        <td>{{ user.full_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Дата рождения:</td>
+                        <td>{{ user.birth_date }}</td>
+                    </tr>
+                    <tr>
+                        <td>Пол:</td>
+                        <td>{{ user.gender }}</td>
+                    </tr>
+                    <tr>
+                        <td>Баланс счета:</td>
+                        <td><strong>{{ user.balance }} ₽</strong></td>
+                    </tr>
+                </table>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
